@@ -309,6 +309,13 @@
   Platform/ARM/SgiPkg/Drivers/PlatformDxe/PlatformDxe.inf
 
   #
+  # SRAT/HMAT Table generator
+  #
+!if $(EDK2_ENABLE_REMOTE_CXL_MEM) == TRUE
+  Platform/ARM/SgiPkg/Library/AcpiTableGeneratorLib/AcpiTableGenerator.inf
+!endif
+
+  #
   # FAT filesystem + GPT/MBR partitioning
   #
   MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
